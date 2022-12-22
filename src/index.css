@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* @media only screen and (min-width: 768px) { */
+.hero-background {
+  clip-path: polygon(7vw 0, 100% 0, calc(100% - 7vw) 100%, 0 100%);
+}
+.hero-container {
+  clip-path: polygon(7vw 0, 100% 0, 100% 100%, 0 100%);
+  /* transform: translate(4.2rem, 0); */
+}
+.track-text-outline{
+  float: left;
+  opacity: 0;
+  /* shape-outside: polygon(0 0, 0 0, 100% 100%, 0 100%); */
+  /* shape-outside: polygon(10% 0%, 50% 80%, 00% 100%, 10.1% 100%); */
+  shape-outside: polygon(0% 20%, 30% 80%, 0% 0%, 45.1% 100%);
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
+}
+@media only screen and (max-width:900px){
+  .track-text-outline{
+    shape-outside: polygon(0 0, 0 0, 0 0,0 0);
+    clip-path: polygon(0 0, 0 0, 0 0,0 0);
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height:10px;}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; } 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(53, 54, 56); 
+  border-radius:10px;}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
